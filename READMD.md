@@ -2,6 +2,7 @@
 
 # Install PostgresSQL
 
+ref: https://www.postgresql.org/download/
 #### Create the file repository configuration
 ```
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -92,3 +93,7 @@ gunzip example-db.sql.gz
 ```
 /usr/bin/psql -h localhost -p 5432 -U ex -w -d example-db < example-db.sql > restore-db.log 2>&1 && grep -i error restore-db.log;
 ```
+
+# References
+
+ref: https://www.postgresql.org/docs/14/index.html
